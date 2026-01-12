@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("./images/background.jpeg");
+    font-family: "Khmer OS Battambang", Arial, sans-serif;
+}
+
+body {
+    font-family: "Khmer OS Battambang", Arial, sans-serif;
+    background-image: url("./images/background.jpeg");
+    background-size: cover;      /* រូបភាពគ្រប់ទំហំ screen */
+    background-position: center; /* បង្ហាញនៅកណ្តាល */
+    background-repeat: no-repeat;
+}
+
+/* background */
+.wrapper {
+    min-height: 100vh;
+    background: url("./images/background.jpeg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* dark overlay */
+.overlay {
+    background: rgba(39, 37, 37, 0.55);
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    padding: 40px 20px;
+    color: #f5e6b3;
+    overflow-y: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    text-align: center;
+}
+
+/* title */
+.title {
+    font-size: 25px;
+    margin-bottom: 20px;
+    justify-content: center;
+    animation: titleFadeUp 1s ease forwards;
+    font-family: "Moulpali", sans-serif;
+}
+
+/* description */
+.desc {
+    color: white;
+    line-height: 1.8;
+    margin-bottom: 30px;
+     animation: descFadeUp 1.5s ease forwards;
+     text-align: justify;
+}
+@keyframes descFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* date & time */
+.info {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 40px;
+     animation: titleFadeUp 1s ease forwards;
+}
+
+.info h3 {
+    font-size: 16px;
+    color: #f5e6b3;
+    font-family: "Moulpali", sans-serif;
+}
+
+.info-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+/* couple section */
+.couple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.person {
+    text-align: center;
+    
+}
+
+.photo {
+    width: 150px;
+    height: 240px;
+    border-radius: 50% / 40%;
+    overflow: hidden;
+    border: 3px solid #f5e6b3;
+    margin: auto;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.role {
+    margin-top: 10px;
+}
+
+.heart {
+    font-size: 30px;
+    margin:  10px;
+    align-self: center;
+}
+
+/* text */
+.card h1 {
+    color: red;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+
+button {
+    background-color: #f5e6b3;
+    margin: 20px;
+    color: rgb(29, 1, 1);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-family: "Khmer OS Battambang", Arial, sans-serif;
+}
+
+button:hover {
+    background-color: #f5e6b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    font-family: "Khmer OS Battambang", Arial, sans-serif;
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-family: "Khmer OS Battambang", Arial, sans-serif;
+}
+
+/* ============== */
+/* ===== Slider ===== */
+/* Slider container */
+.slider-container {
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Images */
+.mySlides img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 15px;
+    position: absolute;
+    top: 0;
+    background: rgba(0,0,0,0.4);
+    border-bottom-right-radius: 10px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 5px;
+    color: white;
+    font-size:10px;
+    font-weight: bold;
+    border-radius: 50%;
+    background: rgba(248, 183, 2, 0.4);
+    user-select: none;
+    transition: 0.3s ease;
+}
+
+.next {
+    right: 15px;
+}
+
+.prev {
+    left: 15px;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+/* Fade animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+/* Dots */
+.dot {
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+    background-color: #717171;
+}
+
+.active {
+    background-color: #333;
+}
